@@ -16,18 +16,20 @@ $ npm install --save default-uid
 var defaultUid = require('default-uid');
 
 // on OS X
+defaultUid(process.platform, function(uid) {
+    //=> 501
+});
 
-defaultUid();
-//=> 501
 
-defaultUid('linux');
-//=> 1000
+defaultUid('linux', function(uid) {
+    //=> 501
+});
 ```
 
 
 ## API
 
-### defaultUid([platform])
+### defaultUid([platform], callback)
 
 #### platform
 
@@ -36,6 +38,12 @@ Default: `process.platform`
 
 One of the [supported Node platforms](http://nodejs.org/api/process.html#process_process_platform).
 
+#### callback
+
+Type: `function`  
+Default: none
+
+The callback receives the `uid` (number).
 
 ## License
 
