@@ -29,5 +29,8 @@
   ],
   "devDependencies": {
     "ava": "0.0.4"
+  },
+  "dependencies": {
+    "getos": "^2.3.0"
   }
 }

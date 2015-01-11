@@ -4,8 +4,25 @@ var defaultUid = require('./');
 
 test(function (t) {
 	process.platform = 'darwin';
-	t.assert(defaultUid() === 501);
-	t.assert(defaultUid('linux') === 1000);
-	t.assert(defaultUid('unicorn') === undefined);
-	t.end();
+    defaultUid(undefined, function (uid) {
+        t.assert(uid === 501);
+    });
+});
+
+test(function (t) {
+    defaultUid('darwin', function (uid) {
+        t.assert(uid === 501);
+    });
+});
+
+test(function (t) {
+    defaultUid('sunos', function (uid) {
+        t.assert(uid === 100);
+    });
+});
+
+test(function (t) {
+    defaultUid('unicorn', function (uid) {
+        t.assert(uid === undefined);
+    });
 });
