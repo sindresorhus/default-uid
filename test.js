@@ -1,18 +1,15 @@
-'use strict';
-var test = require('ava');
-var defaultUid = require('./');
+import test from 'ava';
+import m from './';
 
-test(function (t) {
+test(t => {
 	if (process.platform === 'darwin') {
-		t.assert(defaultUid() === 501);
+		t.is(m(), 501);
 	}
 
 	if (process.platform === 'linux') {
-		t.assert(defaultUid() === 1000);
+		t.is(m(), 1000);
 	}
 
-	t.assert(defaultUid('linux') === 1000);
-	t.assert(defaultUid('unicorn') === undefined);
-
-	t.end();
+	t.is(m('linux'), 1000);
+	t.is(m('unicorn'), undefined);
 });
