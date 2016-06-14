@@ -15,7 +15,7 @@ $ npm install --save default-uid
 ```js
 var defaultUid = require('default-uid');
 
-// on OS X
+// on macOS
 
 defaultUid();
 //=> 501
