@@ -13,7 +13,7 @@ $ npm install --save default-uid
 ## Usage
 
 ```js
-var defaultUid = require('default-uid');
+const defaultUid = require('default-uid');
 
 // on macOS
 
@@ -31,12 +31,12 @@ defaultUid('linux');
 
 #### platform
 
-Type: `string`  
+Type: `string`<br>
 Default: `process.platform`
 
-One of the [supported Node platforms](http://nodejs.org/api/process.html#process_process_platform).
+One of the [supported Node.js platforms](http://nodejs.org/api/process.html#process_process_platform).
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
