@@ -1,4 +1,4 @@
-# default-uid [![Build Status](https://travis-ci.org/sindresorhus/default-uid.svg?branch=master)](https://travis-ci.org/sindresorhus/default-uid)
+# default-uid
 
 > Get the system default [UID *(User ID)*](http://www.linfo.org/uid.html)
 
