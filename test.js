@@ -1,15 +1,15 @@
 import test from 'ava';
-import m from './';
+import defaultUid from './index.js';
 
-test(t => {
+test('main', t => {
 	if (process.platform === 'darwin') {
-		t.is(m(), 501);
+		t.is(defaultUid(), 501);
 	}
 
 	if (process.platform === 'linux') {
-		t.is(m(), 1000);
+		t.is(defaultUid(), 1000);
 	}
 
-	t.is(m('linux'), 1000);
-	t.is(m('unicorn'), undefined);
+	t.is(defaultUid('linux'), 1000);
+	t.is(defaultUid('unicorn'), undefined);
 });

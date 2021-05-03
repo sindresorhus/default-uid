@@ -2,21 +2,18 @@
 
 > Get the system default [UID *(User ID)*](http://www.linfo.org/uid.html)
 
-
 ## Install
 
 ```
-$ npm install --save default-uid
+$ npm install default-uid
 ```
-
 
 ## Usage
 
 ```js
-const defaultUid = require('default-uid');
+import defaultUid from 'default-uid';
 
-// on macOS
-
+// On macOS
 defaultUid();
 //=> 501
 
@@ -24,19 +21,13 @@ defaultUid('linux');
 //=> 1000
 ```
 
-
 ## API
 
-### defaultUid([platform])
+### defaultUid(platform?)
 
 #### platform
 
-Type: `string`<br>
+Type: `string`\
 Default: `process.platform`
 
-One of the [supported Node.js platforms](http://nodejs.org/api/process.html#process_process_platform).
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+One of the [supported Node.js platforms](https://nodejs.org/api/process.html#process_process_platform).
