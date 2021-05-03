@@ -1,6 +1,6 @@
 {
 	"name": "default-uid",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Get the system default UID",
 	"license": "MIT",
 	"repository": "sindresorhus/default-uid",
